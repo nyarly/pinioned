@@ -1,0 +1,6 @@
+set terminal png
+set output "<%= filebase%>.png"
+f(x) = m*x + b
+m = 1; b = 0.1
+fit f(x) "<%= outfile %>" via m,b
+plot "<%= outfile %>" title "<%= TAG%> <%= measure %>", f(x) lt rgb "green" title "Line Fit"

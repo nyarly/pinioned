@@ -1,0 +1,9 @@
+.bundle
+.conductor
+db/*.sqlite3
+log/*.log
+tmp/
+exception-dump*
+*.gif
+doc/
+*.sw?
