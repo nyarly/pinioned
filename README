@@ -9,3 +9,17 @@ The performance of the application is tested by test/performance/folks_test.rb
 
 Otherwise, it's a very simple Rails app - at little as possible has been 
 changed.
+
+A sketch of how to run the tests and get perf data:
+
+Run the test in test/performance/folks_test.rb
+
+If BASE_RAILS is set, it will run with the normal Rack stack and output data to "tmp/base_benchmarking"
+
+If not, it will use Pinion steps and output to "tmp/benchmarking"
+
+You can then use perf2gnuplot.rb to generate gnuplot .p files that include linear fittings.
+
+My output for performance is here in wall_time.png as well as perftools 
+profiles in BR_profile.gif ("base rails": without Pinion) and profile.gif (with 
+Pinion) 
